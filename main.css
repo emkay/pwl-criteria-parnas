@@ -1,6 +1,7 @@
 * { font-family: monospace; }
 body { font-size: 3em; }
 h1 { font-size: 1.1em; }
+main { max-width: 1000px; }
 
 .progressbar { 
   background-color: #666;

@@ -15,7 +15,17 @@ const slides = [
   dijkstra,
   dijkstra2,
   dijkstra3,
-  dijkstra4
+  dijkstra4,
+  backToThePaper,
+  backToThePaper2,
+  backToThePaper3,
+  backToThePaper4,
+  briefStatusReport,
+  briefStatusReport2,
+  briefStatusReport3,
+  briefStatusReport4,
+  briefStatusReport5,
+  whatIsModularization
 ]
 
 function progressbar (state) {
@@ -248,5 +258,139 @@ function dijkstra4 (state) {
   ])
 }
 
+function backToThePaper (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'The Paper')
+      ])
+    ])
+  ])
+}
+
+function backToThePaper2 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'The Paper'),
+        h('h2', 'Intro')
+      ])
+    ])
+  ])
+}
+
+function backToThePaper3 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'The Paper'),
+        h('h2', 'Intro'),
+        h('p', 'Opens with a quote from a Gouthier and Pont textbook.'),
+        h('p', 'A project can be broken up into tiny pieces and each task can form a seperate module. Modules can be tested independently. Errors can be traced to specific modules.')
+      ])
+    ])
+  ])
+}
+
+function backToThePaper4 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'The Paper'),
+        h('h2', 'Intro'),
+        h('p', [h('span', 'Nothing is said about '), h('strong', 'how'), h('span', ' we divide the system into modules.')])
+      ])
+    ])
+  ])
+}
+
+function briefStatusReport (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Brief Status Report'),
+        h('blockquote',
+          `The major advancement in the area of modular programming has been the development of coding techniques... (l) allow one module
+          to be written with little knowledge of the code in
+          another module, and (2) allow modules to be reassembled
+          and replaced without reassembly of the whole
+          system.`),
+        h('cite', [h('a', {href: 'https://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf'}, 'Parnas')])
+      ])
+    ])
+  ])
+}
+
+function briefStatusReport2 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Benefits of modular programming'),
+        h('ol', [
+          h('li', 'Managerial'),
+          h('li', 'Product flexibility'),
+          h('li', 'Comprehensibility')
+        ])
+      ])
+    ])
+  ])
+}
+
+function briefStatusReport3 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Benefits of modular programming'),
+        h('h2', 'Managerial'),
+        h('p', 'Shorter development time because teams could work on different modules.')
+      ])
+    ])
+  ])
+}
+
+function briefStatusReport4 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Benefits of modular programming'),
+        h('h2', 'Product flexibility'),
+        h('p', 'Changes in one module will not require other modules to change.')
+      ])
+    ])
+  ])
+}
+
+function briefStatusReport5 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Benefits of modular programming'),
+        h('h2', 'Comprehensibility'),
+        h('p', 'You can easily understand the whole system by studying one module at a time.')
+      ])
+    ])
+  ])
+}
+
+function whatIsModularization (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'What is Modularization?'),
+        h('p', 'A responsibility assignment rather than a sub-program.')
+      ])
+    ])
+  ])
+}
 
 module.exports = slides
