@@ -25,7 +25,14 @@ const slides = [
   briefStatusReport3,
   briefStatusReport4,
   briefStatusReport5,
-  whatIsModularization
+  whatIsModularization,
+  kwic,
+  kwic2,
+  kwic3,
+  kwicExample,
+  kwicExample2,
+  kwicExample3,
+  kwicExample4
 ]
 
 function progressbar (state) {
@@ -392,5 +399,100 @@ function whatIsModularization (state) {
     ])
   ])
 }
+
+function kwic (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'KWIC'),
+        h('p', 'A key word indexing system to pull out context from titles')
+      ])
+    ])
+  ])
+}
+
+function kwic2 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'KWIC'),
+        h('ul', [
+          h('li', 'accepts ordered set of lines'),
+          h('li', 'line is ordered set of words'),
+          h('li', 'words are ordered set of characters')
+        ])
+      ])
+    ])
+  ])
+}
+
+function kwic3 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'KWIC'),
+        h('p', 'Lines are circularly shifted, removing the first word and appending it to the end of the line.'),
+        h('p', 'Output is a listing of the lines in alphabetical order.')
+      ])
+    ])
+  ])
+}
+
+function kwicExample (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'KWIC Example'),
+        h('p', 'Ride Your Heart')
+      ])
+    ])
+  ])
+}
+
+function kwicExample2 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'KWIC Example'),
+        h('p', 'Ride Your Heart'),
+        h('p', 'Your Heart Ride')
+      ])
+    ])
+  ])
+}
+
+function kwicExample3 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'KWIC Example'),
+        h('p', 'Ride Your Heart'),
+        h('p', 'Your Heart Ride'),
+        h('p', 'Heart Ride Your')
+      ])
+    ])
+  ])
+}
+
+function kwicExample4 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'KWIC Example'),
+        h('p', 'Heart Ride Your'),
+        h('p', 'Ride Your Heart'),
+        h('p', 'Your Heart Ride')
+      ])
+    ])
+  ])
+}
+
 
 module.exports = slides
