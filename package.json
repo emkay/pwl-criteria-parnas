@@ -4,8 +4,10 @@
   "description": "Papers We Love slides for On the Criteria To Be Used in Decomposing Systems into Modules",
   "main": "index.js",
   "scripts": {
+    "build": "browserify -t cssify index.js > bundle.js",
     "dev": "budo index.js -- -t cssify",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "npm run build && cp default.html index.html && surge && rm index.html",
+    "test": "standard"
   },
   "repository": {
     "type": "git",

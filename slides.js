@@ -16,6 +16,7 @@ const slides = [
   dijkstra2,
   dijkstra3,
   dijkstra4,
+  paperSetup,
   backToThePaper,
   backToThePaper2,
   backToThePaper3,
@@ -25,15 +26,50 @@ const slides = [
   briefStatusReport3,
   briefStatusReport4,
   briefStatusReport5,
-  whatIsModularization,
   kwic,
   kwic2,
   kwic3,
   kwicExample,
   kwicExample2,
   kwicExample3,
-  kwicExample4
+  kwicExample4,
+  firstKwicSolution,
+  firstKwicSolution1,
+  firstKwicSolution2,
+  firstKwicSolution3,
+  firstKwicSolution4,
+  firstKwicSolution5,
+  secondKwicSolution,
+  secondKwicSolution2,
+  secondKwicSolution3,
+  secondKwicSolution4,
+  secondKwicSolution5,
+  secondKwicSolution6,
+  secondKwicSolution7,
+  comparison,
+  comparison2,
+  comparison3,
+  comparison3point5,
+  comparison4,
+  comparison5,
+  comparison6,
+  comparison7,
+  comparison8,
+  comparison9,
+  comparison10,
+  comparison11,
+  comparison12,
+  theCriteria,
+  theCriteria2,
+  theCriteria3,
+  conclusion,
+  conclusion2,
+  conclusion3,
+  conclusion4,
+  out
 ]
+
+console.log('slide count: ', slides.length)
 
 function progressbar (state) {
   return h('div.progressbar', [
@@ -265,6 +301,18 @@ function dijkstra4 (state) {
   ])
 }
 
+function paperSetup (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Setup'),
+        h('p', 'If we read this paper with the knowledge of this conference taking place, we get some insight as to what the problems were, and how they were being solved.')
+      ])
+    ])
+  ])
+}
+
 function backToThePaper (state) {
   return h('main', [
     progressbar(state),
@@ -388,18 +436,6 @@ function briefStatusReport5 (state) {
   ])
 }
 
-function whatIsModularization (state) {
-  return h('main', [
-    progressbar(state),
-    h('article', [
-      h('section', [
-        h('h1', 'What is Modularization?'),
-        h('p', 'A responsibility assignment rather than a sub-program.')
-      ])
-    ])
-  ])
-}
-
 function kwic (state) {
   return h('main', [
     progressbar(state),
@@ -494,5 +530,522 @@ function kwicExample4 (state) {
   ])
 }
 
+function firstKwicSolution (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Modularization 1'),
+        h('ul', [
+          h('li', 'Input'),
+          h('li', 'Circular Shift'),
+          h('li', 'Alphabetizing'),
+          h('li', 'Output'),
+          h('li', 'Master Control')
+        ])
+      ])
+    ])
+  ])
+}
+
+function firstKwicSolution1 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Modularization 1'),
+        h('h2', 'Input'),
+        h('ul', [
+          h('li', 'Reads lines'),
+          h('li', 'Stores them in core')
+        ])
+      ])
+    ])
+  ])
+}
+
+function firstKwicSolution2 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Modularization 1'),
+        h('h2', 'Circular Shift'),
+        h('ul', [
+          h('li', 'Reads output from first module'),
+          h('li', 'Stores output in core after shift')
+        ])
+      ])
+    ])
+  ])
+}
+
+function firstKwicSolution3 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Modularization 1'),
+        h('h2', 'Alphabetizing'),
+        h('ul', [
+          h('li', 'Input arrays from modules 1 and 2'),
+          h('li', 'Outputs array of alphabetical circular shifts')
+        ])
+      ])
+    ])
+  ])
+}
+
+function firstKwicSolution4 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Modularization 1'),
+        h('h2', 'Output'),
+        h('ul', [
+          h('li', 'Takes arrays from module 1 and 3'),
+          h('li', 'Outputs nice formatted listing of all shifts')
+        ])
+      ])
+    ])
+  ])
+}
+
+function firstKwicSolution5 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Modularization 1'),
+        h('h2', 'Master Control'),
+        h('ul', [
+          h('li', 'Controls sequencing between modules'),
+          h('li', 'Handles error messages')
+        ])
+      ])
+    ])
+  ])
+}
+
+function secondKwicSolution (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Modularization 2'),
+        h('ul', [
+          h('li', 'Line Storage'),
+          h('li', 'Input'),
+          h('li', 'Circular Shift'),
+          h('li', 'Alphabetizer'),
+          h('li', 'Output'),
+          h('li', 'Master Control')
+        ])
+      ])
+    ])
+  ])
+}
+
+function secondKwicSolution2 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Modularization 2'),
+        h('h2', 'Line Storage'),
+        h('ul', [
+          h('li', 'Functions to access/set characters'),
+          h('li', '`CHAR`'),
+          h('li', '`SETCHAR`'),
+          h('li', 'Error handling')
+        ])
+      ])
+    ])
+  ])
+}
+
+function secondKwicSolution3 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Modularization 2'),
+        h('h2', 'Input'),
+        h('ul', [
+          h('li', 'Takes input'),
+          h('li', 'Calls line storage to set input')
+        ])
+      ])
+    ])
+  ])
+}
+
+function secondKwicSolution4 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Modularization 2'),
+        h('h2', 'Circular Shift'),
+        h('ul', [
+          h('li', 'Functions to circular shift'),
+          h('li', 'Similar to line storage functions'),
+          h('li', '`CSCHAR`')
+        ])
+      ])
+    ])
+  ])
+}
+
+function secondKwicSolution5 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Modularization 2'),
+        h('h2', 'Alphabetizer'),
+        h('ul', [
+          h('li', 'Functions to alphabetize')
+        ])
+      ])
+    ])
+  ])
+}
+
+function secondKwicSolution6 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Modularization 2'),
+        h('h2', 'Output'),
+        h('ul', [
+          h('li', 'Prints set of lines')
+        ])
+      ])
+    ])
+  ])
+}
+
+function secondKwicSolution7 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Modularization 2'),
+        h('h2', 'Master Control'),
+        h('ul', [
+          h('li', 'Similar to master control in system 1')
+        ])
+      ])
+    ])
+  ])
+}
+
+function comparison (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Comparison'),
+        h('ul', [
+          h('li', 'Both work'),
+          h('li', 'Both are "modular", ie small manageable programs'),
+          h('li', 'Algorithms between the two might be the same')
+        ])
+      ])
+    ])
+  ])
+}
+
+function comparison2 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Comparison'),
+        h('blockquote', 'There are a number of design decisions which are questionable and likely to change under many circumstances.'),
+        h('cite', [h('a', {href: 'https://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf'}, 'Parnas')])
+      ])
+    ])
+  ])
+}
+
+function comparison3 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Comparison'),
+        h('h2', 'Changeability'),
+        h('ul', [
+          h('li', 'Input format'),
+          h('li', 'Storing lines in core'),
+          h('li', 'How characters/words are packed'),
+          h('li', 'Circular shift approach'),
+          h('li', 'When or how often to alphabetize the list')
+        ])
+      ])
+    ])
+  ])
+}
+
+function comparison3point5 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Comparison'),
+        h('h2', 'Changeability'),
+        h('ul', [
+          h('li', [h('strike', 'Input format')]),
+          h('li', 'Storing lines in core'),
+          h('li', 'How characters/words are packed'),
+          h('li', 'Circular shift approach'),
+          h('li', 'When or how often to alphabetize the list')
+        ])
+      ])
+    ])
+  ])
+}
+
+function comparison4 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Comparison'),
+        h('h2', 'Changeability'),
+        h('ul', [
+          h('li', [h('strike', 'Input format')]),
+          h('li', [h('b', 'Storing lines in core'), h('span', ' - Would require changes in every module')]),
+          h('li', 'How characters/words are packed'),
+          h('li', 'Circular shift approach'),
+          h('li', 'When or how often to alphabetize the list')
+        ])
+      ])
+    ])
+  ])
+}
+
+function comparison5 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Comparison'),
+        h('h2', 'Changeability'),
+        h('ul', [
+          h('li', [h('strike', 'Input format')]),
+          h('li', [h('b', 'Storing lines in core')]),
+          h('li', [h('b', 'How characters/words are packed')]),
+          h('li', 'Circular shift approach'),
+          h('li', 'When or how often to alphabetize the list')
+        ])
+      ])
+    ])
+  ])
+}
+
+function comparison6 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Comparison'),
+        h('h2', 'Changeability'),
+        h('p', 'In the first system we have a problem where changes made to the system require changes made to all modules.')
+      ])
+    ])
+  ])
+}
+
+function comparison7 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Comparison'),
+        h('h2', 'Changeability'),
+        h('p', 'Using line storage as an example: by storing lines in core any change to the format requires all modules to change.')
+      ])
+    ])
+  ])
+}
+
+function comparison8 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Comparison'),
+        h('h2', 'Changeability'),
+        h('p', 'The second system mitigates this by keeping the details of how lines are stored hidden from all modules except one.'),
+        h('p', 'Any change to line storage would result in one module being changed.')
+      ])
+    ])
+  ])
+}
+
+function comparison9 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Comparison'),
+        h('h2', 'Changeability'),
+        h('p', 'Changes to circular shift will also have required changes in other modules.')
+      ])
+    ])
+  ])
+}
+
+function comparison10 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Comparison'),
+        h('h2', 'Independent Development'),
+        h('p', 'First system gives us complex formats and design decisions are required between modules.'),
+        h('p', 'Whole team should be involved')
+      ])
+    ])
+  ])
+}
+
+function comparison11 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Comparison'),
+        h('h2', 'Independent Development'),
+        h('p', 'Second system the interfaces are more abstract, and less system wide desigin decisions will have an impact on all modules.'),
+        h('p', 'People can work independently.')
+      ])
+    ])
+  ])
+}
+
+function comparison12 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Comparison'),
+        h('h2', 'Comprehensibility'),
+        h('p', 'System one gives us complex formats that are coupled across modules. Because of that we need to understand certain modules in order to understand the rest of the modules.'),
+        h('p', 'Example: in order to understand the output module we first need to understand the alphabetizer, circular shifter, and input modules.')
+      ])
+    ])
+  ])
+}
+
+function theCriteria (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Criteria')
+      ])
+    ])
+  ])
+}
+
+function theCriteria2 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Criteria'),
+        h('h2', 'First System'),
+        h('ul', [
+          h('li', 'Each major step is a module'),
+          h('li', 'Flowchart(?)'),
+          h('li', 'Most common approach')
+        ])
+      ])
+    ])
+  ])
+}
+
+function theCriteria3 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Criteria'),
+        h('h2', 'Second System'),
+        h('ul', [
+          h('li', 'Information Hiding'),
+          h('li', 'Modules can be used anywhere in the system'),
+          h('li', 'Modules hide knowledge from other modules')
+        ])
+      ])
+    ])
+  ])
+}
+
+function conclusion (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Conclusion'),
+        h('p', 'Do not try to figure out what modules your system will use by using only a flowchart.')
+      ])
+    ])
+  ])
+}
+
+function conclusion2 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Conclusion'),
+        h('p', 'Instead, begin with design decisions that are difficult, or likely to change.')
+      ])
+    ])
+  ])
+}
+
+function conclusion3 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Conclusion'),
+        h('p', 'Use information hiding so design decisions in one module have no bearing on design decisions in others.')
+      ])
+    ])
+  ])
+}
+
+function conclusion4 (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'Conclusion'),
+        h('p', 'Result of this should be reusable modules that you can use anywhere in your application, or even in other applications.')
+      ])
+    ])
+  ])
+}
+
+function out (state) {
+  return h('main', [
+    progressbar(state),
+    h('article', [
+      h('section', [
+        h('h1', 'The End'),
+        h('p', [h('a', {href: 'https://twitter.com/mmatuzak'}, '@mmatuzak')])
+      ])
+    ])
+  ])
+}
 
 module.exports = slides
